@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: python
-        image: bharath0812/python6.0
+        image: bharath0812/python:6.0
         ports:
         - containerPort: 5000
