@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: py-deployment
   labels:
-    app: nginx
+    app: py
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: py
   template:
     metadata:
       labels:
-        app: nginx
+        app: py
     spec:
       containers:
-      - name: nginx
-        image: bharath0812/java:3.0
+      - name: python
+        image: bharath0812/python6.0
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
